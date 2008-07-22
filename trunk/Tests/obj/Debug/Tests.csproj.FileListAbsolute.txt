@@ -1,0 +1,3 @@
+D:\Documents\Jason\My Projects\ClassicReport\Tests\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents\Jason\My Projects\ClassicReport\Tests\obj\Debug\Tests.dll
+D:\Documents\Jason\My Projects\ClassicReport\Tests\obj\Debug\Tests.pdb

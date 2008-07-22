@@ -1,0 +1,159 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <RootNamespace>JasonJimenez.ClassicReport</RootNamespace>
+    <AssemblyName>ClassicReport</AssemblyName>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A50C50BE-C6ED-4BC2-9BFA-EA1507E26641}</ProjectGuid>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <BaseAddress>4194304</BaseAddress>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <FileAlignment>4096</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <Optimize>False</Optimize>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <Optimize>True</Optimize>
+    <DefineConstants>TRACE</DefineConstants>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Navisight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=75b7ec17dd7c14c3">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Development Tools\DotNetControls\Divil\Navisight.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=x86" />
+    <Reference Include="PresentationFramework, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="ReachFramework, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Printing, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=x86" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    <Reference Include="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    <Reference Include="WindowsBase, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Printing\FontProvider.cs" />
+    <Compile Include="Misc\Utility.cs" />
+    <Compile Include="ReportPreview\ZoomPreviewControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\ZoomPreviewControl.Designer.cs">
+      <DependentUpon>ZoomPreviewControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassicReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Delegates.cs" />
+    <Compile Include="Common\Collections\ControlList.cs" />
+    <Compile Include="Common\Collections\SelectionList.cs" />
+    <Compile Include="Common\IPage.cs" />
+    <Compile Include="Document\Document.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Printing\PrintDirect.cs" />
+    <Compile Include="ReportDesigner\Delegates.cs" />
+    <Compile Include="Common\IXmlWriter.cs" />
+    <Compile Include="Document\Page.cs" />
+    <Compile Include="Document\Item.cs" />
+    <Compile Include="ReportComposer\Delegates.cs" />
+    <Compile Include="ReportComposer\ReportComposer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportDesigner\ReportDesigner.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReportDesigner\ReportDesigner.Designer.cs">
+      <DependentUpon>ReportDesigner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDesigner\ReportDesignerPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReportDesigner\ReportDesignerPanel.Designer.cs">
+      <DependentUpon>ReportDesignerPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Widgets\FunctionWidget.cs" />
+    <Compile Include="Common\Widgets\TextWidget.cs" />
+    <Compile Include="Common\Widgets\ValueWidget.cs" />
+    <Compile Include="Common\Widgets\HorizontalLineWidget.cs" />
+    <Compile Include="Common\Band.cs" />
+    <Compile Include="Common\Group.cs" />
+    <Compile Include="Common\Enums.cs" />
+    <Compile Include="Common\Aggregator.cs" />
+    <Compile Include="Common\ReportModel.cs" />
+    <Compile Include="Common\ReportReader.cs" />
+    <Compile Include="Common\WidgetFactory.cs" />
+    <Compile Include="Common\Collections\BandList.cs" />
+    <Compile Include="Common\Widgets\BaseWidget.cs" />
+    <Compile Include="Common\Collections\GroupList.cs" />
+    <Compile Include="Printing\PrinterService.cs" />
+    <Compile Include="ReportPreview\ReportPreviewControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReportPreview\ReportPreviewControl.Designer.cs">
+      <DependentUpon>ReportPreviewControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TemplateEditor.cs" />
+    <Compile Include="TemplateUIForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TemplateUIForm.Designer.cs">
+      <DependentUpon>TemplateUIForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XpsPreviewControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XpsPreviewControl.Designer.cs">
+      <DependentUpon>XpsPreviewControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Xps\XpsBuilder.cs" />
+    <EmbeddedResource Include="ReportDesigner\ReportDesigner.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ReportDesigner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDesigner\ReportDesignerPanel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ReportDesignerPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\ReportPreviewControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ReportPreviewControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview\ZoomPreviewControl.resx">
+      <DependentUpon>ZoomPreviewControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TemplateUIForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TemplateUIForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
+  <!--
+  <Import Project="$(SharpDevelopBinPath)\SharpDevelop.Build.CSharp.targets" />
+-->
+</Project>

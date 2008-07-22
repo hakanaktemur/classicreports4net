@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="ClassicReport">
+</Property><Property Name="Solution File" Value="D:\Documents\Jason\My Projects\ClassicReport\ClassicReport.sln">
+</Property><Property Name="Date" Value="Friday, July 18, 2008">
+</Property><Property Name="Time" Value="17:15 PM">
+</Property></Properties><Event ErrorLevel="0" Project="ClassicReport" Source="ClassicReport.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="ClassicReport" Source="ClassicReport.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="Tests" Source="Tests\Tests.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Tests" Source="Tests\Tests.csproj" Description="Converted">
+</Event><Event ErrorLevel="2" Project="TestReport" Source="C:\Documents and Settings\jason\My Documents\SharpDevelop Projects\TestReport\TestReport.csproj" Description="Unable to open project file to perform upgrade.  ">
+</Event><Event ErrorLevel="0" Project="" Source="ClassicReport.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="ClassicReport.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Tests" Source="Tests\Tests.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

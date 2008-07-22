@@ -1,0 +1,20 @@
+bin\Debug\Tests.dll
+bin\Debug\Tests.pdb
+D:\Documents\Jason\My Projects\ClassicReport\Tests\bin\Debug\Tests.tlb
+bin\Debug\ClassicReport.dll
+bin\Debug\nunit.core.dll
+bin\Debug\Navisight.dll
+bin\Debug\Navisight.xml
+bin\Debug\ClassicReport.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Tests.dll
+obj\Debug\Tests.pdb
+bin\Release\Tests.dll
+D:\Documents\Jason\My Projects\ClassicReport\Tests\bin\Release\Tests.tlb
+bin\Release\ClassicReport.dll
+bin\Release\nunit.core.dll
+bin\Release\Navisight.dll
+bin\Release\Navisight.xml
+bin\Release\ClassicReport.pdb
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\Tests.dll

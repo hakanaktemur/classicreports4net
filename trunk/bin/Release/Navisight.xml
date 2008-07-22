@@ -1,0 +1,920 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Navisight</name>
+    </assembly>
+    <members>
+        <member name="T:Divelements.Navisight.Rendering.Office2003ColorScheme">
+            <summary>
+            A colour scheme to be used with the Office 2003 renderer.
+            </summary>
+        </member>
+        <member name="F:Divelements.Navisight.Rendering.Office2003ColorScheme.Automatic">
+            <summary>
+            The renderer will use the current Windows XP theme if available, otherwise fall back to standard Windows colours.
+            </summary>
+        </member>
+        <member name="F:Divelements.Navisight.Rendering.Office2003ColorScheme.Standard">
+            <summary>
+            The renderer will use standard windows colours.
+            </summary>
+        </member>
+        <member name="F:Divelements.Navisight.Rendering.Office2003ColorScheme.LunaBlue">
+            <summary>
+            The renderer will use colours from the Luna Blue theme in Windows XP.
+            </summary>
+        </member>
+        <member name="F:Divelements.Navisight.Rendering.Office2003ColorScheme.LunaOlive">
+            <summary>
+            The renderer will use colours from the Luna Olive theme in Windows XP.
+            </summary>
+        </member>
+        <member name="F:Divelements.Navisight.Rendering.Office2003ColorScheme.LunaSilver">
+            <summary>
+            The renderer will use colours from the Luna Silver theme in Windows XP.
+            </summary>
+        </member>
+        <member name="T:Divelements.Navisight.Rendering.INavisightRenderer">
+            <summary>
+            Provides a template for a class that will renderer the visual controls in this library.
+            </summary>
+        </member>
+        <member name="M:Divelements.Navisight.Rendering.INavisightRenderer.MeasureCategorySize(System.Drawing.Graphics,System.Drawing.Font,System.Drawing.Image,System.String,System.Int32)">
+            <summary>
+            Measures the size of a category header.
+            </summary>
+            <param name="graphics">The Graphics instance to use for drawing and measuring metrics.</param>
+            <param name="font">The font to use for drawing text.</param>
+            <param name="image">The image associated with the category.</param>
+            <param name="text">The text associated with the category.</param>
+            <param name="width">The width, in pixels, available for the category.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Divelements.Navisight.Rendering.INavisightRenderer.PaintBackground(System.Drawing.Graphics,System.Drawing.Rectangle)">
+            <summary>
+            Paints the background of a navigation bar.
+            </summary>
+            <param name="graphics">The Graphics instance to use for drawing and measuring metrics.</param>
+            <param name="bounds">The boundaries of the area to draw.</param>
+        </member>
+        <member name="M:Divelements.Navisight.Rendering.INavisightRenderer.PaintCategoryBackground(System.Drawing.Graphics,System.Drawing.Rectangle)">
+            <summary>
+            Paints the background of a navigation category.
+            </summary>
+            <param name="graphics">The Graphics instance to use for drawing and measuring metrics.</param>
+            <param name="bounds">The boundaries of the area to draw.</param>
+        </member>
+        <member name="M:Divelements.Navisight.Rendering.INavisightRenderer.PaintCategoryHeader(System.Drawing.Graphics,System.Drawing.Font,System.Drawing.Image,System.String,System.Drawing.Rectangle,System.Windows.Forms.DrawItemState,System.Boolean,System.Boolean)">
+            <summary>
+            Draws the header of a navigation category.
+            </summary>
+            <param name="graphics">The Graphics instance to use for drawing and measuring metrics.</param>
+            <param name="font">The font to use for drawing text.</param>
+            <param name="image">The image associated with the category.</param>
+            <param name="text">The text associated with the category.</param>
+            <param name="bounds">The boundaries of the area to draw.</param>
+            <param name="state">The state of the item.</param>
+            <param name="rtl">Whether to draw in right-to-left mode.</param>
+            <param name="showMnemonics">Whether to show keyboard mnemonic underlines.</param>
+        </member>
+        <member name="M:Divelements.Navisight.Rendering.INavisightRenderer.PaintButton(System.Drawing.Graphics,System.Drawing.Font,System.Drawing.StringFormat,Divelements.Navisight.NavigationButton,System.Windows.Forms.DrawItemState,System.Int32)">
+            <summary>
+            Draws a navigation button.
+            </summary>
+            <param name="graphics">The Graphics instance to use for drawing and measuring metrics.</param>
+            <param name="font">The font to use for drawing text.</param>
+            <param name="format">The StringFormat to use for configuring text.</param>
+            <param name="button">The button to draw.</param>
+            <param name="state">The state of the item.</param>
+            <param name="scrollOffset">The offset of the item due to scrolling.</param>
+        </member>
+        <member name="E:Divelements.Navisight.Rendering.INavisightRenderer.RedrawNeeded">
+            <summary>
+            Raised when a property of the renderer has changed that needs a redraw.
+            </summary>
+        </member>
+        <member name="E:Divelements.Navisight.Rendering.INavisightRenderer.LayoutNeeded">
+            <summary>
+            Raised when a property of the renderer has changed that needs the control to be laid out.
+            </summary>
+        </member>
+        <member name="P:Divelements.Navisight.Rendering.INavisightRenderer.BorderSize">
+            <summary>
+            The size, in pixels, of the border to draw around the navigation bar.
+            </summary>
+        </member>
+        <member name="T:Divelements.Navisight.Rendering.Office2000Renderer">
+            <summary>
+            Provides a renderer that mimics the appearance of Microsoft Office 2000.
+            </summary>
+        </member>
+        <member name="T:Divelements.Navisight.Rendering.OfficeRendererBase">
+            <summary>
+            Provides a base for renderers to derive from.
+            </summary>
+        </member>
+        <member name="M:Divelements.Navisight.Rendering.OfficeRendererBase.#ctor">
+            <summary>
+            Initializes a new instance of the OfficeRendererBase class.
+            </summary>
+        </member>
+        <member name="M:Divelements.Navisight.Rendering.OfficeRendererBase.RefreshColors">
+            <summary>
+            Updates the colours based on system settings.
+            </summary>
+        </member>
+        <member name="M:Divelements.Navisight.Rendering.OfficeRendererBase.PaintButtonHighlight(System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.DrawItemState)">
+            <summary>
+            Draws a background highlight for a button.
+            </summary>
+            <param name="graphics">The Graphics object to draw with.</param>
+            <param name="bounds">The bounds around the area to draw.</param>
+            <param name="state">The state of the button.</param>
+        </member>
+        <member name="M:Divelements.Navisight.Rendering.OfficeRendererBase.OnRedrawNeeded(System.EventArgs)">
+            <summary>
+            Raises the RedrawNeeded event.
+            </summary>
+            <param name="e">The arguments associated with the event.</param>
+        </member>
+        <member name="M:Divelements.Navisight.Rendering.OfficeRendererBase.OnLayoutNeeded(System.EventArgs)">
+            <summary>
+            Raises the LayoutNeeded event.
+            </summary>
+            <param name="e">The arguments associated with the event.</param>
+        </member>
+        <member name="M:Divelements.Navisight.Rendering.OfficeRendererBase.DrawImageCore(System.Drawing.Image,System.Drawing.Graphics,System.Windows.Forms.DrawItemState,System.Drawing.Rectangle)">
+            <summary>
+            Draws an image within the specified bounds, and in the specified state.
+            </summary>
+            <param name="image">The image to draw.</param>
+            <param name="graphics">The Graphics object to draw with.</param>
+            <param name="state">The state of the image.</param>
+            <param name="bounds">The bounds around the area to draw.</param>
+        </member>
+        <member name="M:Divelements.Navisight.Rendering.OfficeRendererBase.InterpolateColors(System.Drawing.Color,System.Drawing.Color,System.Single)">
+            <summary>
+            Mixes two colours together to form a new colour.
+            </summary>
+            <param name="color1">The first source colour.</param>
+            <param name="color2">The second source colour.</param>
+            <param name="percentage">A value that lies between 0 and 1, 0 being the first colour and 1 being the second.</param>
+            <returns>The new colour produced after mixing.</returns>
+        </member>
+        <member name="M:Divelements.Navisight.Rendering.OfficeRendererBase.Dispose">
+            <summary>
+            Disposes of the resources used by the class instance.
+            </summary>
+        </member>
+        <member name="E:Divelements.Navisight.Rendering.OfficeRendererBase.RedrawNeeded">
+            <summary>
+            Raised when a property of the renderer has changed that needs a redraw.
+            </summary>
+        </member>
+        <member name="E:Divelements.Navisight.Rendering.OfficeRendererBase.LayoutNeeded">
+            <summary>
+            Raised when a property of the renderer has changed that needs the control to be laid out.
+            </summary>
+        </member>
+        <member name="P:Divelements.Navisight.Rendering.OfficeRendererBase.CustomColors">
+            <summary>
+            Indicates whether custom colours have been configured on this renderer.
+            </summary>
+            <remarks>
+            <para>To go back to system default colours, set this property to false.</para>
+            </remarks>
+        </member>
+        <member name="M:Divelements.Navisight.Rendering.Office2000Renderer.#ctor">
+            <summary>
+            Initializes a new instance of the Office2000Renderer class.
+            </summary>
+        </member>
+        <member name="M:Divelements.Navisight.Rendering.Office2000Renderer.RefreshColors">
+            <summary>
+            Overridden.
+            </summary>
+        </member>
+        <member name="M:Divelements.Navisight.Rendering.Office2000Renderer.ToString">
+            <summary>
+            Overridden.
+            </summary>
+            <returns>A string describing the renderer.</returns>
+        </member>
+        <member name="M:Divelements.Navisight.Rendering.Office2000Renderer.DrawImageCore(System.Drawing.Image,System.Drawing.Graphics,System.Windows.Forms.DrawItemState,System.Drawing.Rectangle)">
+            <summary>
+            Overridden.
+            </summary>
+        </member>
+        <member name="M:Divelements.Navisight.Rendering.Office2000Renderer.PaintBackground(System.Drawing.Graphics,System.Drawing.Rectangle)">
+            <summary>
+            Overridden.
+            </summary>
+        </member>
+        <member name="M:Divelements.Navisight.Rendering.Office2000Renderer.PaintCategoryBackground(System.Drawing.Graphics,System.Drawing.Rectangle)">
+            <summary>
+            Overridden.
+            </summary>
+        </member>
+        <member name="M:Divelements.Navisight.Rendering.Office2000Renderer.MeasureCategorySize(System.Drawing.Graphics,System.Drawing.Font,System.Drawing.Image,System.String,System.Int32)">
+            <summary>
+            Overridden.
+            </summary>
+        </member>
+        <member name="M:Divelements.Navisight.Rendering.Office2000Renderer.DrawCategoryHeaderBackground(System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.DrawItemState)">
+            <summary>
+            Draws the background of a category header.
+            </summary>
+            <param name="graphics">The Graphics object with which to draw.</param>
+            <param name="bounds">The bounds of the category header.</param>
+            <param name="state">The state of the item.</param>
+        </member>
+        <member name="M:Divelements.Navisight.Rendering.Office2000Renderer.PaintCategoryHeader(System.Drawing.Graphics,System.Drawing.Font,System.Drawing.Image,System.String,System.Drawing.Rectangle,System.Windows.Forms.DrawItemState,System.Boolean,System.Boolean)">
+            <summary>
+            Overridden.
+            </summary>
+        </member>
+        <member name="M:Divelements.Navisight.Rendering.Office2000Renderer.PaintButton(System.Drawing.Graphics,System.Drawing.Font,System.Drawing.StringFormat,Divelements.Navisight.NavigationButton,System.Windows.Forms.DrawItemState,System.Int32)">
+            <summary>
+            Overridden.
+            </summary>
+        </member>
+        <member name="M:Divelements.Navisight.Rendering.Office2000Renderer.PaintButtonHighlight(System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.DrawItemState)">
+            <summary>
+            Overridden.
+            </summary>
+        </member>
+        <member name="P:Divelements.Navisight.Rendering.Office2000Renderer.OffsetButtonsWhenSelected">
+            <summary>
+            Indicates whether to draw button contents slightly offset when they are selected.
+            </summary>
+        </member>
+        <member name="P:Divelements.Navisight.Rendering.Office2000Renderer.BorderSize">
+            <summary>
+            The size, in pixels, of the border to draw around the navigation bar.
+            </summary>
+        </member>
+        <member name="T:Divelements.Navisight.Rendering.Office2002Renderer">
+            <summary>
+            Provides a renderer that mimics the appearance of Microsoft Office 2002.
+            </summary>
+        </member>
+        <member name="M:Divelements.Navisight.Rendering.Office2002Renderer.#ctor">
+            <summary>
+            Initializes a new instance of the Office2002Renderer class.
+            </summary>
+        </member>
+        <member name="M:Divelements.Navisight.Rendering.Office2002Renderer.ToString">
+            <summary>
+            Overridden.
+            </summary>
+            <returns>A string describing the renderer.</returns>
+        </member>
+        <member name="M:Divelements.Navisight.Rendering.Office2002Renderer.DrawImageCore(System.Drawing.Image,System.Drawing.Graphics,System.Windows.Forms.DrawItemState,System.Drawing.Rectangle)">
+            <summary>
+            Overridden.
+            </summary>
+        </member>
+        <member name="M:Divelements.Navisight.Rendering.Office2002Renderer.PaintCategoryBackground(System.Drawing.Graphics,System.Drawing.Rectangle)">
+            <summary>
+            Overridden.
+            </summary>
+        </member>
+        <member name="M:Divelements.Navisight.Rendering.Office2002Renderer.Dispose">
+            <summary>
+            Cleans up any resources used by the renderer.
+            </summary>
+        </member>
+        <member name="M:Divelements.Navisight.Rendering.Office2002Renderer.RefreshColors">
+            <summary>
+            Overridden.
+            </summary>
+        </member>
+        <member name="M:Divelements.Navisight.Rendering.Office2002Renderer.PaintButtonHighlight(System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.DrawItemState)">
+            <summary>
+            Overridden.
+            </summary>
+        </member>
+        <member name="P:Divelements.Navisight.Rendering.Office2002Renderer.HighlightColor">
+            <summary>
+            The colour used as a base for drawing button highlights.
+            </summary>
+        </member>
+        <member name="P:Divelements.Navisight.Rendering.Office2002Renderer.OffsetButtonsWhenSelected">
+            <summary>
+            Overridden.
+            </summary>
+        </member>
+        <member name="T:Divelements.Navisight.Rendering.Office2003Renderer">
+            <summary>
+            Provides a renderer that mimics the appearance of Microsoft Office 2003.
+            </summary>
+        </member>
+        <member name="M:Divelements.Navisight.Rendering.Office2003Renderer.#ctor">
+            <summary>
+            Initializes a new instance of the Office2003Renderer class.
+            </summary>
+        </member>
+        <member name="M:Divelements.Navisight.Rendering.Office2003Renderer.RefreshColors">
+            <summary>
+            Overridden.
+            </summary>
+        </member>
+        <member name="M:Divelements.Navisight.Rendering.Office2003Renderer.ToString">
+            <summary>
+            Overridden.
+            </summary>
+            <returns>A string describing the renderer.</returns>
+        </member>
+        <member name="M:Divelements.Navisight.Rendering.Office2003Renderer.PaintBackground(System.Drawing.Graphics,System.Drawing.Rectangle)">
+            <summary>
+            Overridden.
+            </summary>
+        </member>
+        <member name="M:Divelements.Navisight.Rendering.Office2003Renderer.DrawCategoryHeaderBackground(System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.DrawItemState)">
+            <summary>
+            Overridden.
+            </summary>
+        </member>
+        <member name="P:Divelements.Navisight.Rendering.Office2003Renderer.BorderSize">
+            <summary>
+            Overridden.
+            </summary>
+        </member>
+        <member name="P:Divelements.Navisight.Rendering.Office2003Renderer.ColorScheme">
+            <summary>
+            The Office 2003 colour scheme used to render graphical elements.
+            </summary>
+        </member>
+        <member name="T:Divelements.Navisight.ButtonBar">
+            <summary>
+            Extends a navigation category to include an array of buttons.
+            </summary>
+        </member>
+        <member name="M:Divelements.Navisight.ButtonBar.#ctor">
+            <summary>
+            Initializes a new instance of the ButtonBar class.
+            </summary>
+        </member>
+        <member name="M:Divelements.Navisight.ButtonBar.Dispose(System.Boolean)">
+            <summary>
+            Overridden.
+            </summary>
+        </member>
+        <member name="M:Divelements.Navisight.ButtonBar.OnMouseMove(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Overridden.
+            </summary>
+            <param name="e">The arguments associated with the event.</param>
+        </member>
+        <member name="M:Divelements.Navisight.ButtonBar.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Overridden.
+            </summary>
+        </member>
+        <member name="M:Divelements.Navisight.ButtonBar.OnMouseUp(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Overridden.
+            </summary>
+            <param name="e">The arguments associated with the event.</param>
+        </member>
+        <member name="M:Divelements.Navisight.ButtonBar.OnMouseLeave(System.EventArgs)">
+            <summary>
+            Overridden.
+            </summary>
+            <param name="e">The arguments associated with the event.</param>
+        </member>
+        <member name="M:Divelements.Navisight.ButtonBar.GetButtonAt(System.Drawing.Point)">
+            <summary>
+            Retrieves the NavigationButton at the specified position.
+            </summary>
+            <param name="position">The position at which to search.</param>
+            <returns>The NavigationButton at the specified position. If no NavigationButton is found, a null reference is returned.</returns>
+        </member>
+        <member name="M:Divelements.Navisight.ButtonBar.OnHandleCreated(System.EventArgs)">
+            <summary>
+            Overridden.
+            </summary>
+            <param name="e">The arguments associated with the event.</param>
+        </member>
+        <member name="M:Divelements.Navisight.ButtonBar.OnChangeUICues(System.Windows.Forms.UICuesEventArgs)">
+            <summary>
+            Overridden.
+            </summary>
+            <param name="e">The arguments associated with the event.</param>
+        </member>
+        <member name="M:Divelements.Navisight.ButtonBar.ProcessMnemonic(System.Char)">
+            <summary>
+            Overridden.
+            </summary>
+        </member>
+        <member name="M:Divelements.Navisight.ButtonBar.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Overridden.
+            </summary>
+            <param name="e">The arguments associated with the event.</param>
+        </member>
+        <member name="M:Divelements.Navisight.ButtonBar.OnResize(System.EventArgs)">
+            <summary>
+            Overridden.
+            </summary>
+            <param name="e">The arguments associated with the event.</param>
+        </member>
+        <member name="M:Divelements.Navisight.ButtonBar.OnPaintBackground(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Overridden.
+            </summary>
+            <param name="pevent">The arguments associated with the event.</param>
+        </member>
+        <member name="M:Divelements.Navisight.ButtonBar.OnFontChanged(System.EventArgs)">
+            <summary>
+            Overridden.
+            </summary>
+            <param name="e">The arguments associated with the event.</param>
+        </member>
+        <member name="P:Divelements.Navisight.ButtonBar.Text">
+            <summary>
+            Overridden.
+            </summary>
+        </member>
+        <member name="P:Divelements.Navisight.ButtonBar.DefaultSize">
+            <summary>
+            Overridden.
+            </summary>
+        </member>
+        <member name="P:Divelements.Navisight.ButtonBar.AutoScroll">
+            <summary>
+            Overridden.
+            </summary>
+        </member>
+        <member name="P:Divelements.Navisight.ButtonBar.Renderer">
+            <summary>
+            The renderer used to draw the control.
+            </summary>
+            <remarks>
+            <para>If the control is hosted in a NavigationBar, that renderer is used instead.</para>
+            </remarks>
+        </member>
+        <member name="P:Divelements.Navisight.ButtonBar.Buttons">
+            <summary>
+            Gets the collection of buttons assigned to the ButtonBar.
+            </summary>
+        </member>
+        <member name="P:Divelements.Navisight.ButtonBar.Margin">
+            <summary>
+            The margin, in pixels, around any buttons belonging to the ButtonBar.
+            </summary>
+        </member>
+        <member name="P:Divelements.Navisight.ButtonBar.HighlightMode">
+            <summary>
+            Indicates what portion of the button is encompassed by the highlight.
+            </summary>
+        </member>
+        <member name="P:Divelements.Navisight.ButtonBar.TextAlignment">
+            <summary>
+            Indicates how button text is aligned relative to the image.
+            </summary>
+        </member>
+        <member name="T:Divelements.Navisight.CategoryChangeAnimation">
+            <summary>
+            Defines what type of animation is used to switch visually between categories.
+            </summary>
+        </member>
+        <member name="F:Divelements.Navisight.CategoryChangeAnimation.FastThenSlow">
+            <summary>
+            The active category slides between views fast then slow.
+            </summary>
+        </member>
+        <member name="F:Divelements.Navisight.CategoryChangeAnimation.SlowThenFast">
+            <summary>
+            The active category slides between views slow then fast.
+            </summary>
+        </member>
+        <member name="F:Divelements.Navisight.CategoryChangeAnimation.None">
+            <summary>
+            No animation is performed.
+            </summary>
+        </member>
+        <member name="T:Divelements.Navisight.ButtonTextAlignment">
+            <summary>
+            Defines how the text of a button is laid out relative to the image.
+            </summary>
+        </member>
+        <member name="F:Divelements.Navisight.ButtonTextAlignment.Side">
+            <summary>
+            The text is positioned next to the image.
+            </summary>
+        </member>
+        <member name="F:Divelements.Navisight.ButtonTextAlignment.Underneath">
+            <summary>
+            The text is positioned underneath the image.
+            </summary>
+        </member>
+        <member name="T:Divelements.Navisight.ButtonHighlightMode">
+            <summary>
+            Defines how the highlight of a button is drawn relative to its contents.
+            </summary>
+        </member>
+        <member name="F:Divelements.Navisight.ButtonHighlightMode.All">
+            <summary>
+            The whole button is encompassed by the highlight.
+            </summary>
+        </member>
+        <member name="F:Divelements.Navisight.ButtonHighlightMode.ImageOnly">
+            <summary>
+            Only the image is encompassed by the highlight.
+            </summary>
+        </member>
+        <member name="T:Divelements.Navisight.NavigationBar">
+            <summary>
+            Presents a list of categories, each containing subcontrols.
+            </summary>
+        </member>
+        <member name="M:Divelements.Navisight.NavigationBar.#ctor">
+            <summary>
+            Initializes a new instance of the NavigationBar class.
+            </summary>
+        </member>
+        <member name="M:Divelements.Navisight.NavigationBar.OnSelectedCategoryChanged(System.EventArgs)">
+            <summary>
+            Raises the SelectedCategoryChanged event.
+            </summary>
+            <param name="e">The arguments associated with the event.</param>
+        </member>
+        <member name="M:Divelements.Navisight.NavigationBar.OnSelectedCategoryChanging(System.ComponentModel.CancelEventArgs)">
+            <summary>
+            Raises the SelectedCategoryChanging event.
+            </summary>
+            <param name="e">The arguments associated with the event.</param>
+        </member>
+        <member name="M:Divelements.Navisight.NavigationBar.ProcessMnemonic(System.Char)">
+            <summary>
+            Overridden.
+            </summary>
+        </member>
+        <member name="M:Divelements.Navisight.NavigationBar.OnControlAdded(System.Windows.Forms.ControlEventArgs)">
+            <summary>
+            Overridden.
+            </summary>
+        </member>
+        <member name="M:Divelements.Navisight.NavigationBar.OnControlRemoved(System.Windows.Forms.ControlEventArgs)">
+            <summary>
+            Overridden.
+            </summary>
+        </member>
+        <member name="M:Divelements.Navisight.NavigationBar.OnResize(System.EventArgs)">
+            <summary>
+            Overridden.
+            </summary>
+            <param name="e">The arguments associated with the event.</param>
+        </member>
+        <member name="M:Divelements.Navisight.NavigationBar.OnLayout(System.Windows.Forms.LayoutEventArgs)">
+            <summary>
+            Overridden.
+            </summary>
+            <param name="levent">The arguments associated with the event.</param>
+        </member>
+        <member name="M:Divelements.Navisight.NavigationBar.OnMouseLeave(System.EventArgs)">
+            <summary>
+            Overridden.
+            </summary>
+            <param name="e">The arguments associated with the event.</param>
+        </member>
+        <member name="M:Divelements.Navisight.NavigationBar.OnHandleCreated(System.EventArgs)">
+            <summary>
+            Overridden.
+            </summary>
+            <param name="e">The arguments associated with the event.</param>
+        </member>
+        <member name="M:Divelements.Navisight.NavigationBar.GetCategoryAt(System.Drawing.Point)">
+            <summary>
+            Retrieves the CategoryBase at the specified position.
+            </summary>
+            <param name="position">The position at which to search.</param>
+            <returns>The CategoryBase at the specified position. If no CategoryBase is found, a null reference is returned.</returns>
+        </member>
+        <member name="M:Divelements.Navisight.NavigationBar.OnPaintBackground(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Overridden.
+            </summary>
+        </member>
+        <member name="M:Divelements.Navisight.NavigationBar.AnimateCategoryChange(Divelements.Navisight.NavigationCategory)">
+            <summary>
+            Causes the specified category to animate in to view.
+            </summary>
+            <param name="category">The category to become selected.</param>
+        </member>
+        <member name="M:Divelements.Navisight.NavigationBar.OnDragOver(System.Windows.Forms.DragEventArgs)">
+            <summary>
+            Overridden.
+            </summary>
+            <param name="de">The arguments associated with the event.</param>
+        </member>
+        <member name="M:Divelements.Navisight.NavigationBar.OnMouseMove(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Overridden.
+            </summary>
+        </member>
+        <member name="M:Divelements.Navisight.NavigationBar.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Overridden.
+            </summary>
+        </member>
+        <member name="M:Divelements.Navisight.NavigationBar.OnMouseUp(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Overridden.
+            </summary>
+            <param name="e">The arguments associated with the event.</param>
+        </member>
+        <member name="M:Divelements.Navisight.NavigationBar.OnFontChanged(System.EventArgs)">
+            <summary>
+            Overridden.
+            </summary>
+        </member>
+        <member name="M:Divelements.Navisight.NavigationBar.OnChangeUICues(System.Windows.Forms.UICuesEventArgs)">
+            <summary>
+            Overridden.
+            </summary>
+            <param name="e">The arguments associated with the event.</param>
+        </member>
+        <member name="M:Divelements.Navisight.NavigationBar.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Overridden.
+            </summary>
+        </member>
+        <member name="M:Divelements.Navisight.NavigationBar.Dispose(System.Boolean)">
+            <summary>
+            Overridden.
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="E:Divelements.Navisight.NavigationBar.SelectedCategoryChanged">
+            <summary>
+            Occurs when the selected category has changed.
+            </summary>
+        </member>
+        <member name="E:Divelements.Navisight.NavigationBar.SelectedCategoryChanging">
+            <summary>
+            Occurs when the selected category is about to change.
+            </summary>
+            <remarks>
+            <para>This event allows a listener to cancel the action before it occurs.</para>
+            </remarks>
+        </member>
+        <member name="P:Divelements.Navisight.NavigationBar.DefaultSize">
+            <summary>
+            Overridden.
+            </summary>
+        </member>
+        <member name="P:Divelements.Navisight.NavigationBar.AnimationSpeed">
+            <summary>
+            The time, in milliseconds, that an animation takes to complete.
+            </summary>
+        </member>
+        <member name="P:Divelements.Navisight.NavigationBar.Animation">
+            <summary>
+            Indicates the animation used to change between categories.
+            </summary>
+        </member>
+        <member name="P:Divelements.Navisight.NavigationBar.Renderer">
+            <summary>
+            The renderer used to calculate object metrics and draw contents.
+            </summary>
+        </member>
+        <member name="P:Divelements.Navisight.NavigationBar.SelectedCategory">
+            <summary>
+            Indicates which category is visible within the navigation bar.
+            </summary>
+        </member>
+        <member name="T:Divelements.Navisight.NavigationButton">
+            <summary>
+            Provides a clickable button that can display image and text.
+            </summary>
+        </member>
+        <member name="M:Divelements.Navisight.NavigationButton.#ctor">
+            <summary>
+            Initializes a new instance of the NavigationButton class.
+            </summary>
+        </member>
+        <member name="M:Divelements.Navisight.NavigationButton.Clone">
+            <summary>
+            Creates a new NavigationButton with the same properties as this one.
+            </summary>
+            <returns>A cloned button.</returns>
+        </member>
+        <member name="M:Divelements.Navisight.NavigationButton.Dispose(System.Boolean)">
+            <summary>
+            Overridden.
+            </summary>
+        </member>
+        <member name="M:Divelements.Navisight.NavigationButton.#ctor(System.String,System.Drawing.Image)">
+            <summary>
+            Initializes a new instance of the NavigationButton class, using the specified text and image.
+            </summary>
+            <param name="text">The text for the button.</param>
+            <param name="image">The image for the button.</param>
+        </member>
+        <member name="M:Divelements.Navisight.NavigationButton.ApplyBounds(System.Drawing.Graphics,System.Drawing.Rectangle,System.Drawing.Rectangle,System.Boolean)">
+            <summary>
+            Causes the button to adopt the specified bounds.
+            </summary>
+            <param name="graphics">The Graphics object with which to measure metrics.</param>
+            <param name="outerBounds">The outer bounds of the button, which will be used to draw the highlight and catch mouse movement.</param>
+            <param name="innerBounds">The inner bounds of the button, which will be used to draw text and imagery.</param>
+            <param name="rtl">Whether to lay out child items in right-to-left mode.</param>
+        </member>
+        <member name="M:Divelements.Navisight.NavigationButton.OnActivate(System.EventArgs)">
+            <summary>
+            Raises the Activate event.
+            </summary>
+            <param name="e">The arguments associated with the event.</param>
+        </member>
+        <member name="E:Divelements.Navisight.NavigationButton.Activate">
+            <summary>
+            Raised when the button is activated, either by clicking or through a mnemonic.
+            </summary>
+        </member>
+        <member name="P:Divelements.Navisight.NavigationButton.OuterBounds">
+            <summary>
+            The rectangle that completely encloses the button.
+            </summary>
+        </member>
+        <member name="P:Divelements.Navisight.NavigationButton.TextBounds">
+            <summary>
+            The bounds of the text in the button.
+            </summary>
+        </member>
+        <member name="P:Divelements.Navisight.NavigationButton.ImageBounds">
+            <summary>
+            The bounds of the image in the button.
+            </summary>
+        </member>
+        <member name="P:Divelements.Navisight.NavigationButton.Parent">
+            <summary>
+            The ButtonBar that is currently hosting the button.
+            </summary>
+        </member>
+        <member name="P:Divelements.Navisight.NavigationButton.Text">
+            <summary>
+            The text associated with the button.
+            </summary>
+            <remarks>
+            <para>Text will be displayed either next to or underneath any image in the button. Mnemonics can be processed by prepending a character
+            with an ampersand.</para>
+            </remarks>
+        </member>
+        <member name="P:Divelements.Navisight.NavigationButton.Visible">
+            <summary>
+            Indicates whether the button is visible.
+            </summary>
+        </member>
+        <member name="P:Divelements.Navisight.NavigationButton.Enabled">
+            <summary>
+            Indicates whether the button is enabled.
+            </summary>
+        </member>
+        <member name="P:Divelements.Navisight.NavigationButton.ToolTipText">
+            <summary>
+            Gets or sets the text that appears as a ToolTip for the button.
+            </summary>
+        </member>
+        <member name="P:Divelements.Navisight.NavigationButton.Image">
+            <summary>
+            The image assigned to the button.
+            </summary>
+        </member>
+        <member name="P:Divelements.Navisight.NavigationButton.Checked">
+            <summary>
+            Indicates the state of the item.
+            </summary>
+        </member>
+        <member name="T:Divelements.Navisight.NavigationButtonCollection">
+            <summary>
+            A collection of NavigationButton instances that belong to a ButtonBar.
+            </summary>
+        </member>
+        <member name="M:Divelements.Navisight.NavigationButtonCollection.OnClear">
+            <summary>
+            Overridden.
+            </summary>
+        </member>
+        <member name="M:Divelements.Navisight.NavigationButtonCollection.OnClearComplete">
+            <summary>
+            Overridden.
+            </summary>
+        </member>
+        <member name="M:Divelements.Navisight.NavigationButtonCollection.OnInsertComplete(System.Int32,System.Object)">
+            <summary>
+            Overridden.
+            </summary>
+        </member>
+        <member name="M:Divelements.Navisight.NavigationButtonCollection.OnRemoveComplete(System.Int32,System.Object)">
+            <summary>
+            Overridden.
+            </summary>
+        </member>
+        <member name="M:Divelements.Navisight.NavigationButtonCollection.AddRange(Divelements.Navisight.NavigationButton[])">
+            <summary>
+            Adds an array of buttons to the collection.
+            </summary>
+            <param name="items">The array of buttons to add.</param>
+            <remarks>
+            <para>When adding more than one button at a time you should use this method, as some logic is postponed until after the whole batch
+            has been added, making it more efficient.</para>
+            </remarks>
+        </member>
+        <member name="M:Divelements.Navisight.NavigationButtonCollection.Add(Divelements.Navisight.NavigationButton)">
+            <summary>
+            Adds a button to the collection.
+            </summary>
+            <param name="item">The button to add.</param>
+            <returns>The new index of the button in the collection.</returns>
+        </member>
+        <member name="M:Divelements.Navisight.NavigationButtonCollection.Insert(System.Int32,Divelements.Navisight.NavigationButton)">
+            <summary>
+            Inserts a button in to the collection at a given offset.
+            </summary>
+            <param name="index">The position at which to insert the button.</param>
+            <param name="item">The button to insert.</param>
+        </member>
+        <member name="M:Divelements.Navisight.NavigationButtonCollection.Remove(Divelements.Navisight.NavigationButton)">
+            <summary>
+            Removes the specified button from the collection.
+            </summary>
+            <param name="item">The button to remove.</param>
+        </member>
+        <member name="M:Divelements.Navisight.NavigationButtonCollection.Contains(Divelements.Navisight.NavigationButton)">
+            <summary>
+            Examines the collection to see if it contains the specified button.
+            </summary>
+            <param name="item">The button to look for.</param>
+            <returns>A value indicating whether the button was found.</returns>
+        </member>
+        <member name="M:Divelements.Navisight.NavigationButtonCollection.IndexOf(Divelements.Navisight.NavigationButton)">
+            <summary>
+            Returns the index of a button in the collection.
+            </summary>
+            <param name="item">The button to look for.</param>
+            <returns>The index of the button if found; otherwise -1.</returns>
+        </member>
+        <member name="M:Divelements.Navisight.NavigationButtonCollection.CopyTo(Divelements.Navisight.NavigationButton[],System.Int32)">
+            <summary>
+            Copies the contents of the collection in to the given array, starting at the specified offset.
+            </summary>
+            <param name="array">The array to be copied in to.</param>
+            <param name="index">The index to start at.</param>
+        </member>
+        <member name="P:Divelements.Navisight.NavigationButtonCollection.Item(System.Int32)">
+            <summary>
+            Returns the button at the specified index in the collection.
+            </summary>
+        </member>
+        <member name="T:Divelements.Navisight.NavigationCategory">
+            <summary>
+            A category within a list, which can contain subcontrols.
+            </summary>
+        </member>
+        <member name="M:Divelements.Navisight.NavigationCategory.#ctor">
+            <summary>
+            Initializes a new instance of the NavigationCategory class.
+            </summary>
+        </member>
+        <member name="M:Divelements.Navisight.NavigationCategory.#ctor(System.Windows.Forms.Control)">
+            <summary>
+            Initializes a new instance of the NavigationCategory class, wrapping the specified control.
+            </summary>
+            <param name="child">The child control to wrap.</param>
+        </member>
+        <member name="M:Divelements.Navisight.NavigationCategory.OnPaintBackground(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Overridden.
+            </summary>
+            <param name="pevent">The arguments associated with the event.</param>
+        </member>
+        <member name="M:Divelements.Navisight.NavigationCategory.OnEnabledChanged(System.EventArgs)">
+            <summary>
+            Overridden.
+            </summary>
+            <param name="e">The arguments associated with the event.</param>
+        </member>
+        <member name="P:Divelements.Navisight.NavigationCategory.BackColor">
+            <summary>
+            Overridden.
+            </summary>
+        </member>
+        <member name="P:Divelements.Navisight.NavigationCategory.BackgroundImage">
+            <summary>
+            Overridden.
+            </summary>
+        </member>
+        <member name="P:Divelements.Navisight.NavigationCategory.Text">
+            <summary>
+            Overridden;
+            </summary>
+        </member>
+        <member name="P:Divelements.Navisight.NavigationCategory.Image">
+            <summary>
+            The image associated with the category.
+            </summary>
+        </member>
+    </members>
+</doc>

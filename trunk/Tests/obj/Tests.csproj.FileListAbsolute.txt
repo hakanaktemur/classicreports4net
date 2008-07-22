@@ -1,0 +1,13 @@
+D:\Documents\Jason\My Projects\ClassicReport\Tests\bin\Debug\Tests.dll
+D:\Documents\Jason\My Projects\ClassicReport\Tests\bin\Debug\Tests.pdb
+D:\Documents\Jason\My Projects\ClassicReport\Tests\bin\Debug\Tests.tlb
+D:\Documents\Jason\My Projects\ClassicReport\Tests\bin\Debug\ClassicReport.dll
+D:\Documents\Jason\My Projects\ClassicReport\Tests\bin\Debug\nunit.core.dll
+D:\Documents\Jason\My Projects\ClassicReport\Tests\bin\Debug\System.Printing.dll
+D:\Documents\Jason\My Projects\ClassicReport\Tests\bin\Debug\PresentationCore.dll
+D:\Documents\Jason\My Projects\ClassicReport\Tests\bin\Debug\Navisight.dll
+D:\Documents\Jason\My Projects\ClassicReport\Tests\bin\Debug\ClassicReport.pdb
+D:\Documents\Jason\My Projects\ClassicReport\Tests\bin\Debug\Navisight.xml
+D:\Documents\Jason\My Projects\ClassicReport\Tests\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents\Jason\My Projects\ClassicReport\Tests\obj\Debug\Tests.dll
+D:\Documents\Jason\My Projects\ClassicReport\Tests\obj\Debug\Tests.pdb
