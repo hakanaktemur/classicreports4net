@@ -1,3 +1,18 @@
 D:\Documents\Jason\My Projects\ClassicReport\Tests\obj\Debug\ResolveAssemblyReference.cache
 D:\Documents\Jason\My Projects\ClassicReport\Tests\obj\Debug\Tests.dll
 D:\Documents\Jason\My Projects\ClassicReport\Tests\obj\Debug\Tests.pdb
+D:\Projects\ClassicReport\Tests\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\ClassicReport\Tests\bin\Debug\Tests.dll
+D:\Projects\ClassicReport\Tests\bin\Debug\Tests.pdb
+D:\Projects\ClassicReport\Tests\bin\Debug\Tests.tlb
+D:\Projects\ClassicReport\Tests\bin\Debug\ClassicReport.dll
+D:\Projects\ClassicReport\Tests\bin\Debug\nunit.core.dll
+D:\Projects\ClassicReport\Tests\bin\Debug\nunit.core.interfaces.dll
+D:\Projects\ClassicReport\Tests\bin\Debug\nunit.framework.dll
+D:\Projects\ClassicReport\Tests\bin\Debug\System.Printing.dll
+D:\Projects\ClassicReport\Tests\bin\Debug\PresentationCore.dll
+D:\Projects\ClassicReport\Tests\bin\Debug\Navisight.dll
+D:\Projects\ClassicReport\Tests\bin\Debug\ClassicReport.pdb
+D:\Projects\ClassicReport\Tests\bin\Debug\nunit.framework.xml
+D:\Projects\ClassicReport\Tests\obj\Debug\Tests.dll
+D:\Projects\ClassicReport\Tests\obj\Debug\Tests.pdb

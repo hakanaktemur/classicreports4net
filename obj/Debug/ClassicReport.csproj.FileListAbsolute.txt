@@ -11,3 +11,16 @@ D:\Documents\Jason\My Projects\ClassicReport\obj\Debug\JasonJimenez.ClassicRepor
 D:\Documents\Jason\My Projects\ClassicReport\obj\Debug\ClassicReport.csproj.GenerateResource.Cache
 D:\Documents\Jason\My Projects\ClassicReport\obj\Debug\ClassicReport.dll
 D:\Documents\Jason\My Projects\ClassicReport\obj\Debug\ClassicReport.pdb
+D:\Projects\ClassicReport\bin\Debug\ClassicReport.dll
+D:\Projects\ClassicReport\bin\Debug\ClassicReport.pdb
+D:\Projects\ClassicReport\bin\Debug\PresentationCore.dll
+D:\Projects\ClassicReport\bin\Debug\System.Printing.dll
+D:\Projects\ClassicReport\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\ClassicReport\obj\Debug\JasonJimenez.ClassicReport.ReportDesigner.resources
+D:\Projects\ClassicReport\obj\Debug\JasonJimenez.ClassicReport.ReportDesignerPanel.resources
+D:\Projects\ClassicReport\obj\Debug\JasonJimenez.ClassicReport.ReportPreviewControl.resources
+D:\Projects\ClassicReport\obj\Debug\JasonJimenez.ClassicReport.ZoomPreviewControl.resources
+D:\Projects\ClassicReport\obj\Debug\JasonJimenez.ClassicReport.TemplateUIForm.resources
+D:\Projects\ClassicReport\obj\Debug\ClassicReport.csproj.GenerateResource.Cache
+D:\Projects\ClassicReport\obj\Debug\ClassicReport.dll
+D:\Projects\ClassicReport\obj\Debug\ClassicReport.pdb
