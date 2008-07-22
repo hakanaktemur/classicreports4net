@@ -1,0 +1,15 @@
+D:\Documents\Jason\My Projects\ClassicReport\bin\Debug\ClassicReport.dll
+D:\Documents\Jason\My Projects\ClassicReport\bin\Debug\ClassicReport.pdb
+D:\Documents\Jason\My Projects\ClassicReport\bin\Debug\Navisight.dll
+D:\Documents\Jason\My Projects\ClassicReport\bin\Debug\PresentationCore.dll
+D:\Documents\Jason\My Projects\ClassicReport\bin\Debug\System.Printing.dll
+D:\Documents\Jason\My Projects\ClassicReport\bin\Debug\Navisight.xml
+D:\Documents\Jason\My Projects\ClassicReport\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents\Jason\My Projects\ClassicReport\obj\Debug\JasonJimenez.ClassicReport.ReportDesigner.resources
+D:\Documents\Jason\My Projects\ClassicReport\obj\Debug\JasonJimenez.ClassicReport.ReportDesignerPanel.resources
+D:\Documents\Jason\My Projects\ClassicReport\obj\Debug\JasonJimenez.ClassicReport.ReportPreviewControl.resources
+D:\Documents\Jason\My Projects\ClassicReport\obj\Debug\JasonJimenez.ClassicReport.ZoomPreviewControl.resources
+D:\Documents\Jason\My Projects\ClassicReport\obj\Debug\JasonJimenez.ClassicReport.TemplateUIForm.resources
+D:\Documents\Jason\My Projects\ClassicReport\obj\Debug\ClassicReport.csproj.GenerateResource.Cache
+D:\Documents\Jason\My Projects\ClassicReport\obj\Debug\ClassicReport.dll
+D:\Documents\Jason\My Projects\ClassicReport\obj\Debug\ClassicReport.pdb

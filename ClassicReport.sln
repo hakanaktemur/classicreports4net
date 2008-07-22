@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassicReport", "ClassicReport.csproj", "{A50C50BE-C6ED-4BC2-9BFA-EA1507E26641}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{A1FD36D2-876B-421C-8730-3ABF1E8CCF33}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A50C50BE-C6ED-4BC2-9BFA-EA1507E26641}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A50C50BE-C6ED-4BC2-9BFA-EA1507E26641}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A50C50BE-C6ED-4BC2-9BFA-EA1507E26641}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A50C50BE-C6ED-4BC2-9BFA-EA1507E26641}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1FD36D2-876B-421C-8730-3ABF1E8CCF33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1FD36D2-876B-421C-8730-3ABF1E8CCF33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1FD36D2-876B-421C-8730-3ABF1E8CCF33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1FD36D2-876B-421C-8730-3ABF1E8CCF33}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
