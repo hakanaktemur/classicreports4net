@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("ClassicReports for .NET")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("DevPinoy")]
+[assembly: AssemblyCompany("Smashing Software")]
 [assembly: AssemblyProduct("ClassicReports for .NET")]
-[assembly: AssemblyCopyright("Copyright © Jason Jimenez 2007")]
+[assembly: AssemblyCopyright("Copyright © Jason Jimenez 2005- 2008")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
