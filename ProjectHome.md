@@ -1,0 +1,1 @@
+ClassicReports4NET is a .NET library designed to fill the void in the .NET framework for designing, previewing and printing reports targeting epson compatible dot-matrix printers.
